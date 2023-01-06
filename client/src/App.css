@@ -1,0 +1,109 @@
+
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  /* text-align: center; */
+}
+
+body{
+  background: #333;
+  color: aliceblue;
+  font-family: sans-serif;
+}
+
+.form{
+  max-width: 500px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background: red; */
+  padding: 10px;
+}
+
+input::placeholder, textarea::placeholder{
+  color: #fff;
+}
+
+.form__item, .form_content{
+  width: 100%;
+  padding: 10px;
+  color: white;
+  font-size: 1.05rem;
+
+  background: transparent;
+  border: 2px solid rgb(26, 170, 175);
+}
+
+.form__item:focus, .form_content:focus{
+  outline: none;
+  background: rgba(26, 170, 175, 0.623);
+}
+
+.form_content{
+  resize: none;
+  min-height: 100px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.form_content::-webkit-scrollbar{
+  display: none;
+}
+
+.form__submit{
+  width: 100%;
+  padding: 10px;
+  background: rgba(26, 170, 175, 0.623);
+  color: #fff;
+  border: none;
+
+  font-size: 1.05rem;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+}
+
+.form__submit:hover{
+  background: rgb(26, 170, 175);
+}
+
+.list__post{
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  gap: 1rem;
+}
+
+.post{
+  border: 1px solid rgb(26, 170, 175);
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.post__title{
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.post__content{
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.post__author{
+  font-size: 1rem;
+  font-style: italic;
+  color: rgb(26, 170, 175);
+}
+

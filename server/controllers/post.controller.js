@@ -1,8 +1,11 @@
 const postModel = require("../models/post.model");
 
-module.exports.allPosts = (res) => {
+module.exports.allPosts = (req, res) => {
   postModel
-    .find((err, docs) => !err ? res.status(200).send(docs):res.status(400).send(`Error to get data ${err}`))
+    .find((err, docs) => {
+      if (!err) return res.status(200).send(docs);
+      else return res.status(400).send(`Error to get data ${err}`);
+    })
     .sort({ createdAt: -1 });
 };
 

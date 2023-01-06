@@ -4,6 +4,21 @@ const app = express();
 // dotenv
 require("dotenv").config({ path: "./.env" });
 
+// cors
+const cors = require("cors");
+
+const corsOptions = {
+  origin: [process.env.HOST_NAME],
+  credentials: true,
+  allowdHeaders: ["sessionId", "Content-Type"],
+  exposedHeaders: ["sessionId"],
+  method: "GET, HEAD,PUT,PATCH,POST,DELETE",
+  preflightContinue: false,
+};
+
+app.use(cors(corsOptions));
+
+
 // db connection
 require("./config/db");
 
