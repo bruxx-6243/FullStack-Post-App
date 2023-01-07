@@ -107,3 +107,11 @@ input::placeholder, textarea::placeholder{
   color: rgb(26, 170, 175);
 }
 
+.loading{
+  font-size: 2rem;
+  margin-top: 4rem;
+  text-align: center;
+  color: rgb(26, 170, 175);
+
+}
+
